@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ushop</title>
+    <!-- style  -->
+    <link rel="stylesheet" href="/styles/utils.css">
+    <link rel="stylesheet" href="/styles/filterStyle.css">
+</head>
+<body>
+    <!-- nav  -->
+    <header>
+        <nav>
+          <div class="nav-container">
+            <div class="nav-1 wrapper">
+            
+            <div class="logo flex">
+              <img src="/images/logo.png" alt="logo" width="30" />
+              <h1>Ushop</h1>
+            </div>
+  
+            <div>
+            <a href="/Pages/cart.html"
+              ><div class="nav-btn">
+                <ion-icon name="cart-outline"></ion-icon>
+                <h3>My cart</h3>
+                <div id="cartAmount">0</div>
+              </div></a
+            >
+          </div>
+          </div>
+          <hr>
+          <div class="nav-2 wrapper">
+            <a href="/index.html"><h3>Home</h3></a>
+            <a href="/Pages/filter.html"><h3 class="active">Categories</h3></a>
+            <h3>Services</h3>
+            <h3>Support</h3>
+          </div>
+          </div>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <div class="wrapper">
+              <!-- categorie list -->
+              <div class="categories-container">
+                <!-- <div class="category" data-id="1"><h3>mobiles</h3></div> -->
+              </div>
+    
+              <!-- product list -->
+                <h2 id="totalProduct"></h2>
+                <div class="items-list">
+
+                <!-- <div class="item" id="">
+                  <div class="img-box">
+                    <img src="/images/ele1.png" alt=""/>
+                  </div>
+                  <div>
+                    <hr>
+                    <h3>name</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <h3 class="price">$ 100</h3>
+                    <div class="quantity">
+                      <ion-icon name="remove-circle" onclick="decrement(${id})"></ion-icon>
+                      <div id=${id}>${search.item === undefined ? 0 : search.item}</div>
+                      <ion-icon name="add-circle" onclick="increment(${id})"></ion-icon>
+                    </div>
+                  </div>
+                </div> -->
+
+              </div>
+            </div>
+          </section>
+    </main>
+    <!-- javascript -->
+    <script src="/Data.js"></script>
+    <script src="/main.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

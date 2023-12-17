@@ -1,0 +1,88 @@
+:root{
+    --clr-card: hsla(0, 0%, 100%, 1);
+    --clr-border: hsla(0, 0%, 88%, 1);
+}
+.cart{
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    gap: 1rem;
+}
+.items-list{
+    background-color:var(--clr-card);
+    border: 1px solid var(--clr-border);
+    border-radius: 5px;
+    padding: 2rem;
+}
+.cart-item{
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+.img-box{
+    height: 140px;
+    width: 140px;
+    background-position: center;
+    background-size: cover;
+    border: 2px solid var(--clr-border);
+    border-radius: 10px;
+}
+.img-box img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+.btn-quant{
+    background-color: whitesmoke;
+    padding: 0.5rem;
+    border-radius: 10px;
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+.btn-quant ion-icon{
+    color: rgb(50, 50, 50);
+    cursor: pointer;
+}
+
+
+
+.payment{
+    background-color:var(--clr-card);
+    border: 1px solid var(--clr-border);
+    border-radius: 5px;
+    padding: 2rem;
+}
+.payment div{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 0.5rem;
+}
+.tPrice{
+    color: goldenrod;
+    font-weight: bold;
+}
+.btn-pay{
+    cursor: pointer;
+    background-color: hsla(128, 100%, 35%, 1);
+    color: white;
+    margin-block: 0.5rem;
+    width: 79%;
+}
+.btn-emt{
+    cursor: pointer;
+    background-color:darkred;
+    color: white;
+    margin-block: 0.5rem;
+    width: 20%;
+}
+
+@media (max-width:760px) {
+    .items-list{
+        padding: 1rem;
+    }
+    .payment{
+        padding: 1rem;
+    }
+}

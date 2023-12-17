@@ -1,0 +1,69 @@
+/* category  */
+.categories-container{
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns:auto;
+    gap: 1rem;
+    align-items: center;
+    justify-content: left;
+    overflow-x: scroll;
+    margin-bottom: 1rem;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;
+}
+.categories-container::-webkit-scrollbar{
+    display: none;
+
+}
+.category{
+    background-color: orangered;
+    padding: 0.2em 1em;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.category h3{
+    color: aliceblue;
+}
+
+
+/* products  */
+.items-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+    gap: 1rem;
+}
+.item{
+    height: 350px;
+    background-color: var(--clr-card);
+    border: 1px solid var(--clr-border);
+    border-radius: 10px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.img-box{
+    height: 140px;
+    width: 140px;
+    background-position: center;
+    background-size: cover;
+}
+.img-box img{
+    width: 100%;
+    height: 100%;
+}
+.quantity{
+    background-color: whitesmoke;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding: 0.5rem;
+    border-radius: 10px;
+    box-shadow: 0px 1px 3px lightgrey;
+}
+.quantity ion-icon{
+    color: rgb(91, 91, 91);
+    cursor: pointer;
+}

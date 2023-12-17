@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Ushop</title>
+        <!-- style  -->
+        <link rel="stylesheet" href="/styles/cartStyle.css">
+        <link rel="stylesheet" href="/styles/utils.css">
+    </head>
+<body>
+    <!-- navbar -->
+    <header>
+        <nav>
+          <div class="nav-container">
+            <div class="nav-1 wrapper">
+            
+            <div class="logo flex">
+              <img src="/images/logo.png" alt="logo" width="30" />
+              <h1>Ushop</h1>
+            </div>
+  
+            <div>
+            <a href="/Pages/cart.html"
+              ><div class="nav-btn">
+                <ion-icon name="cart-outline"></ion-icon>
+                <h3>My cart</h3>
+                <div id="cartAmount">0</div>
+              </div></a
+            >
+          </div>
+          </div>
+          <hr>
+          <div class="nav-2 wrapper">
+            <a href="/index.html"><h3>Home</h3></a>
+            <a href="/Pages/filter.html"><h3>Categories</h3></a>
+            <h3>Services</h3>
+            <h3>Support</h3>
+          </div>
+          </div>
+        </nav>
+    </header>
+    <main>
+        <section>
+        <div class="wrapper cart">
+
+          <div class="payment">
+            <div><p>subtotal</p><h3 id="lable"></h3></div>
+            <div><p>Discount</p><h3>$00</h3></div>
+            <div><p>Tax</p><h3>$00</h3></div>
+            <div><p>Delivery</p><h3>$00</h3></div>
+            <hr>
+            <div><h3>Total</h3><h3 class="tPrice"></h3></div>
+            <div><button class="btn-emt" onclick="clearCart()">Empty cart</button><button class="btn-pay">Make Purchase</button></div>
+        </div>
+
+        <div class="items-list">
+            <!-- <div class="cart-item">
+                <div class="img-box">
+                    <img src="/images/ele1.png" alt="">
+                </div>
+                <div>
+                    <h3>name</h3>
+                    <p>description</p>
+                    <h3>price</h3>
+                </div>
+                <div class="btn-add">
+                      <ion-icon size="large" name="remove-circle" onclick="decrement(${id})"></ion-icon>
+                      <div id=${id}> <h3>${search.item === undefined ? 0 : search.item}</h3></div>
+                      <ion-icon size="large" name="add-circle" onclick="increment(${id})"></ion-icon>
+                </div>
+            </div>
+            <hr> -->
+        </div>
+
+        </div>
+    </section>
+    </main>
+    <!-- javascript  -->
+    <script src="/Data.js"></script>
+    <script src="/cart.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

@@ -1,0 +1,137 @@
+:root{
+    --fs-hero-1: 1.125rem;
+    --fs-hero-2: 1rem;
+    --clr-border: hsla(0, 0%, 88%, 1);
+    --clr-card: hsla(0, 0%, 100%, 1);
+}
+    @media (min-width:50em) {
+        :root{
+            --fs-hero-1: 2rem;
+            --fs-hero-2: 1.75ren;
+        }
+    }
+
+
+/* hero  */
+.hero{
+    background: url(/images/hero.jpg) center/cover;
+    height: 500px;   
+}
+.hero div{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.hero h1{
+    font-size: var(--fs-hero-1);
+    font-weight: 700;
+    /* 600 */
+    color: white;
+}
+.hero h4{
+    font-size: var(--fs-hero-2);
+    color: white;
+    font-weight: 400;
+    margin-bottom: 1rem;
+}
+.hero button{
+    background-color: orangered;
+    color: white;
+    cursor: pointer;
+}
+
+
+/* section-1 */
+/* category  */
+.categories-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+    gap: 1rem;
+    padding-bottom: 1rem;
+}
+.category{
+    border: 1px solid gray;
+    text-align: left;
+    padding: 1rem;
+    border-radius: 5px;
+}
+/* items */
+.view-all{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.items-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+    gap: 1rem;
+}
+.item{
+    height: 320px;
+    background-color: var(--clr-card);
+    border: 1px solid var(--clr-border);
+    border-radius: 10px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.img-box{
+    height: 140px;
+    width: 140px;
+    background-position: center;
+    background-size: cover;
+}
+.img-box img{
+    width: 100%;
+    height: 100%;
+}
+
+/* section-2 */
+.service{
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 3rem 2rem;
+    gap: 1rem;
+    background-color: rgb(227, 223, 255);
+    border-radius: 10px;
+}
+.service-list{
+    flex-wrap: wrap;
+    gap: 3rem;
+}
+.service-card{
+    gap: 1rem;
+}
+
+
+
+/* footer  */
+footer{
+    background-color: rgb(53, 53, 53);
+}
+footer h3, footer .logo h1{
+    color: white;
+}
+
+.footer-container{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 2rem 1rem;
+}
+.footer-nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+footer .logo {
+    justify-content: left;
+}
+    @media (min-width:850px) {
+        .footer-container{
+            grid-template-columns: 400px 1fr;
+        }
+    }

@@ -1,0 +1,220 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+:root {
+  /* color  */
+  --clr-font-primary: hsla(0, 0%, 11%, 1);
+  --clr-font-secondary:hsla(213, 13%, 59%, 1);
+  --clr-card: hsla(0, 0%, 100%, 1);
+  --clr-bg:  hsla(204, 45%, 98%, 1);
+  --clr-border: hsla(0, 0%, 88%, 1);
+  --clr-btn-primary: orangered;
+  --clr-btn-secondary: hsla(128, 100%, 35%, 1);
+
+  /* font weight  */
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-semi-bold: 600;
+  --fw-bold: 700;
+
+  /* font size  */
+  --fs-300: 0.813rem;
+  --fs-400: 1rem;
+  --fs-500: 1.125rem;
+  --fs-600: 1.25rem;
+  --fs-700: 1.5rem;
+  
+  --fs-primary-heading: var(--fs-500);
+  --fs-secondary-heading: var(--fs-300);
+  --fs-para: var(--fs-300);
+  --fs-btn: var(--fs-300);
+  --fs-price: var(--fs-400);
+}
+
+@media (min-width: 50em) {
+  :root {
+    --fs-primary-heading: var(--fs-700);
+    --fs-secondary-heading: var(--fs-400);
+    --fs-para: var(--fs-400);
+    --fs-btn: var(--fs-400);
+    --fs-price: var(--fs-600);
+  }
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+/* Set core body defaults */
+html,
+body {
+  height: 100%;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  background-color: var(--clr-bg);
+}
+a {
+  text-decoration: none;
+  color: var(--clr-font-primary);
+}
+ul,
+ol {
+  list-style: none;
+}
+
+/* Make images easier to work with */
+img,
+picture,
+svg {
+  max-width: 100%;
+  display: block;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+
+/* utils  */
+
+.flex{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.wrapper{
+  --max-width: 1320px;
+  --pading:2rem;
+  width: min(var(--max-width),100% - var(--pading));
+  margin-inline: auto;
+}
+section{
+  padding-block: 2rem;
+}
+button{
+  font-size: var(--fs-btn);
+  font-weight: var(--fw-medium);
+  padding: 0.5em 1em;
+  border-radius: 5px;
+  border: 0;
+}
+
+/* general styling ===================================================  */
+
+/* font classes  */
+
+h2{
+  font-size: var(--fs-primary-heading);
+  color: var(--clr-font-primary);
+  font-weight: var(--fw-semi-bold);
+  padding-block: 0.5rem;
+}
+h3{
+  font-size: var(--fs-secondary-heading);
+  font-weight: var(--fw-medium);
+  color: var(--clr-font-primary);
+}
+.price{
+  font-size: var(--fs-price);
+  color: goldenrod;
+  padding-block: 0.5rem;
+}
+p, .footer-nav li{
+  font-size: var(--fs-para);
+  font-weight: var(--fw-regular);
+  color: var(--clr-font-secondary);
+}
+
+
+
+/* navbar */
+nav{
+  background-color: white;
+  box-shadow: 0px 1px 5px #999;
+}
+.nav-container{
+    display: flex;
+    flex-direction: column;
+}
+.nav-1{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 0.5rem;
+}
+.logo{
+    align-items: baseline;
+    cursor: pointer;
+}
+.logo h1{
+    font-size: 1.8rem;
+    font-weight: var(--fw-semi-bold);
+    color: var(--clr-font-primary);
+}
+.nav-btn{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 1rem;
+    border: 1px solid gray;
+    border-radius: 5px;
+    padding: 0.2em 0.5em;
+    gap: 0.5rem;
+}
+#cartAmount{
+  position: absolute;
+  font-size: 16px;
+  background-color: orangered;
+  color: white;
+  top: -10px;
+  right: -10px;
+  padding: 3px;
+  border-radius: 5px;
+}
+hr{
+    margin-block: 0.5rem;
+}
+.nav-2{
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    padding-bottom: 0.5rem;
+}
+.active{
+  font-weight: var(--fw-bold);
+  color: var(--clr-btn-primary);
+}
+
+@media (max-width:50em) {
+  .logo h1{
+    font-size: 1.5rem;
+  }
+  .nav-btn h3{
+    display: none;
+  }
+}
